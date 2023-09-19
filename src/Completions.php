@@ -19,8 +19,7 @@ class Completions
         int $top_k = 5,
         array $metadata = [],
         bool $stream = false
-    )
-    {
+    ) {
         return $this->connector->send(
             new Requests\CreateCompletionRequest(
                 $prompt,
