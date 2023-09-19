@@ -18,7 +18,7 @@ Initialize the SDK:
 use use JordanDalton\AnthropicSdkPhp\AnthropicConnector;
 
 AnthropicConnector::make('YOUR-API-KEY')
-    ->completions("\n\nHuman:Say Hi\n\nAssistant:")
+    ->completions()
     ->create("\n\nHuman:What is today?\n\nAssistant:);
 ```
 
