@@ -1,11 +1,12 @@
 <?php
 
 use JordanDalton\AnthropicSdkPhp\AnthropicConnector;
+use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 
 it('can successfully call anthropic completion api', function () {
 
-    $mock_client = new \Saloon\Http\Faking\MockClient([
+    $mock_client = new MockClient([
         MockResponse::make([
             'completion' => ' Hello!',
             'stop_reason' => 'stop_sequence',
@@ -15,10 +16,10 @@ it('can successfully call anthropic completion api', function () {
         ], 200),
     ]);
 
-    $connector = AnthropicConnector::make('TEST-KEY')
+    $connector = AnthropicConnector::make('YOUR-API-KEY')
         ->withMockClient($mock_client)
         ->completions()
-        ->create();
+        ->create("\n\nHuman:What is today?\n\nAssistant:");
 
     $output = $connector->json();
 

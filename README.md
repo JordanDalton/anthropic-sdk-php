@@ -1,57 +1,34 @@
-# This is my package anthropic-sdk-php
+# Anthropic PHP SDK
+Introduction
+The Anthropic PHP SDK provides an easy way to integrate with Anthropic's services from PHP applications. This SDK handles authentication, requests, and responses when communicating with Anthropic's API.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/jordandalton/anthropic-sdk-php.svg?style=flat-square)](https://packagist.org/packages/jordandalton/anthropic-sdk-php)
-[![Tests](https://img.shields.io/github/actions/workflow/status/jordandalton/anthropic-sdk-php/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/jordandalton/anthropic-sdk-php/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/jordandalton/anthropic-sdk-php.svg?style=flat-square)](https://packagist.org/packages/jordandalton/anthropic-sdk-php)
-
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/anthropic-sdk-php.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/anthropic-sdk-php)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+## API KEY
+https://console.anthropic.com/account/keys
 
 ## Installation
-
-You can install the package via composer:
-
-```bash
-composer require jordandalton/anthropic-sdk-php
+Install the SDK using Composer:
 ```
+composer require yourname/anthropic-php-sdk
+```
+Usage
+Initialize the SDK:
 
-## Usage
 
 ```php
-$skeleton = new JordanDalton\AnthropicSdkPhp();
-echo $skeleton->echoPhrase('Hello, JordanDalton!');
+use use JordanDalton\AnthropicSdkPhp\AnthropicConnector;
+
+AnthropicConnector::make('YOUR-API-KEY')
+    ->completions("\n\nHuman:Say Hi\n\nAssistant:")
+    ->create("\n\nHuman:What is today?\n\nAssistant:);
 ```
 
-## Testing
-
-```bash
-composer test
-```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+## Documentation
+See the Anthropic API documentation for more information on available endpoints.
 
 ## Contributing
-
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [Jordan Dalton](https://github.com/JordanDalton)
-- [All Contributors](../../contributors)
+See CONTRIBUTING.md for information on contributing to the SDK.
 
 ## License
+The Anthropic PHP SDK is licensed under the MIT license. See LICENSE for more information.
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Let me know if you would like me to expand on any of those sections or provide more specifics! The key things to cover are installation, basic usage, linking to documentation, licensing, and contribution guidelines.
