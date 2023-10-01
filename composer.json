@@ -44,7 +44,5 @@
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
         }
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    }
 }
