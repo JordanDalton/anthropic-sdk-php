@@ -54,6 +54,7 @@ class CreateCompletionRequest extends Request implements HasBody
             'top_k' => $this->top_k,
             'stop_sequences' => $this->stop_sequences,
             'metadata' => $this->metadata,
+            'stream' => $this->stream
         ];
     }
 }
