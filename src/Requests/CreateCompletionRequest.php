@@ -45,7 +45,7 @@ class CreateCompletionRequest extends Request implements HasBody
 
     public function defaultBody(): array
     {
-        if(! isset($this->metadata['user_id'])) {
+        if (! isset($this->metadata['user_id'])) {
             $this->metadata['user_id'] = uniqid();
         }
 
