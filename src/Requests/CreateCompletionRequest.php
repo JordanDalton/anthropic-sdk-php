@@ -32,7 +32,7 @@ class CreateCompletionRequest extends Request implements HasBody
         public readonly array $stop_sequences = [],
         public readonly float $top_p = 0.7,
         public readonly int $top_k = 5,
-        public readonly array $metadata = [],
+        public array $metadata = [],
         public readonly bool $stream = false
     ) {
         //
@@ -45,8 +45,8 @@ class CreateCompletionRequest extends Request implements HasBody
 
     public function defaultBody(): array
     {
-        if(! isset($metadata['user_id'])) {
-            $metadata['user_id'] = uniqid();
+        if(! isset($this->metadata['user_id'])) {
+            $this->metadata['user_id'] = uniqid();
         }
 
         return [
