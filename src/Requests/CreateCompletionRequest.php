@@ -45,6 +45,10 @@ class CreateCompletionRequest extends Request implements HasBody
 
     public function defaultBody(): array
     {
+        if(! isset($metadata['user_id'])) {
+            $metadata['user_id'] = uniqid();
+        }
+
         return [
             'model' => 'claude-2',
             'prompt' => $this->prompt,
