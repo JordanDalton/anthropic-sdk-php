@@ -2,6 +2,10 @@
 
 All notable changes to `anthropic-sdk-php` will be documented in this file.
 
+## Updated Read Only Condition - 2024-01-24
+
+Updated Read Only Condition
+
 ## Added default metadata support. - 2024-01-24
 
 Claude is requiring user_id as part of the meta data.
