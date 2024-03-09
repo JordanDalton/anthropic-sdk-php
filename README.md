@@ -8,7 +8,7 @@ https://console.anthropic.com/account/keys
 ## Installation
 Install the SDK using Composer:
 ```
-composer require jordandalton/anthropic-php-sdk
+composer require jordandalton/anthropic-sdk-php
 ```
 Usage
 Initialize the SDK:
